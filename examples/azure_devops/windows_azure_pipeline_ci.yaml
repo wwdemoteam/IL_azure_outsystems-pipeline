@@ -13,6 +13,7 @@ steps:
   inputs:
     targetType: 'inline'
     script:
+      pip install -q -I -r cd_pipelines/requirements.txt
       pip install -U outsystems-pipeline==$(OSPipelineVersion)
     workingDirectory: $(System.DefaultWorkingDirectory)
   displayName: 'Install OutSystems Pipeline Package'
