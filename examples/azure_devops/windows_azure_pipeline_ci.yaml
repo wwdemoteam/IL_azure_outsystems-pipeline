@@ -12,10 +12,9 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 
-    pip install wheel
-    python setup.py bdist_wheel 
-    pip install -U outsystems-pipeline==$(OSPipelineVersion)
+    script:   pip install wheel
+      python setup.py bdist_wheel 
+      pip install -U outsystems-pipeline==$(OSPipelineVersion)
     workingDirectory: $(System.DefaultWorkingDirectory)
   displayName: 'Install OutSystems Pipeline Package'
 
