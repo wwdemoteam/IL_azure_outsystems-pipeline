@@ -13,7 +13,8 @@ steps:
   inputs:
     targetType: 'inline'
     script:   
-      python setup.py bdist_wheel 
+      pip uninstall wheel
+      pip install wheel
       pip install -U outsystems-pipeline==$(OSPipelineVersion)
     workingDirectory: $(System.DefaultWorkingDirectory)
   displayName: 'Install OutSystems Pipeline Package'
