@@ -12,15 +12,15 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: pip install -U outsystems-pipeline==$(OSPipelineVersion)
-    workingDirectory: $(System.DefaultWorkingDirectory)
-  displayName: 'Install OutSystems Pipeline Package'
+    script: sudo -H pip install setuptools --upgrade
+  displayName: 'Update the setuptools'
 
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: Get-InstalledModule
-  displayName: 'GetModules'
+    script: pip install -U outsystems-pipeline==$(OSPipelineVersion)
+    workingDirectory: $(System.DefaultWorkingDirectory)
+  displayName: 'Install OutSystems Pipeline Package'
 
 
 - task: PowerShell@2
