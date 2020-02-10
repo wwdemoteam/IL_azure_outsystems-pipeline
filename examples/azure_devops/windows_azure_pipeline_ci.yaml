@@ -18,22 +18,9 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: python --version
-  displayName: 'Python version'
+    script: sudo apt-get install python3
+  displayName: 'Python update'
 
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: python -m pip --version
-  displayName: 'Python version' 
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: pip --version
-  displayName: 'Pip version'
-  
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
