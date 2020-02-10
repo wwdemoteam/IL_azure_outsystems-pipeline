@@ -20,7 +20,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: Get-InstalledModule
-    workingDirectory: $(Systems.DefaultWorkingDirectory)
   displayName: 'GetModules'
 
 
