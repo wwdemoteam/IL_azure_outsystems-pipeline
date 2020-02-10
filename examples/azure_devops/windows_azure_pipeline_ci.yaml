@@ -2,10 +2,10 @@
 steps:
 
 - task: UsePythonVersion@0
-  inputs:
-   #versionspec: '3.x'
-    #addToPath: true
-    #architecture: 'x64'
+  inputs :
+    versionspec: '3.x'
+    addToPath: true
+    architecture: 'x64'
   displayName: 'Set Python version'
 
 
